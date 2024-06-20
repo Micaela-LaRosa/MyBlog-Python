@@ -1,0 +1,19 @@
+Test Case 1: Creating a Blog Entry
+
+Objective:
+Verify that a user can create a new blog entry successfully.
+
+Steps:
+
+1. Log in as an authorized user.
+
+2. Navigate to the blog creation page.
+
+3. Fill out the form with title, subtitle, body text, and optionally an image.
+
+4. Submit the form.
+
+5. Verify that the new blog entry appears in the list of blogs.
+
+Expected Outcome:
+The new blog entry is created successfully and appears in the list of blogs.

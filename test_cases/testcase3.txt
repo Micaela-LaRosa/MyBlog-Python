@@ -1,0 +1,48 @@
+Test Case 3: Editing a Blog Entry by User with Editing Permissions
+
+Objective: 
+Verify that a user with editing permissions can modify an existing blog entry.
+
+Steps (Initial, Unsuccessful Case):
+
+1.Log in as a user with editing permissions.
+Attempt to log in with valid credentials.
+Verify user credentials and permissions are correct.
+If access is denied, review user permissions within the system.
+
+2. Navigate to the detail page of a blog entry.
+Identify the specific entry to be edited.
+Confirm that the blog entry detail page loads correctly.
+If there are navigation errors, check URL routing and configuration within the project.
+
+3. Select the edit option.
+Locate and select the link or button that allows editing of the blog entry.
+Ensure that the user interface correctly displays editing options for the user with appropriate permissions.
+If the edit option is unavailable, review permission settings in the class-based views or functions handling blog editing.
+
+4. Modify one of the fields (title, subtitle, body text, image).
+Make changes to fields in the blog entry, such as title, subtitle, body text, or attached image.
+Confirm that changes made are correctly reflected in the editing forms and views.
+If changes are not saved correctly, review validation methods and saving logic in the Blog model and edit views.
+
+5. Save the changes made.
+Click the save or update button to save the changes made to the blog entry.
+Verify that the system processes the update request correctly and that the data is saved in the database without errors.
+If there are errors during saving, review error messages returned by Django and ensure there are no validation restrictions or business logic preventing the update.
+
+Modifications Made to Resolve the Issue:
+
+1- User Permission Correction:
+Verified and adjusted user permissions within the Django authentication system to ensure the user has the correct role and permissions to edit blog entries.
+
+2- URL Routing and Configuration Correction:
+Reviewed and adjusted URL routing and configuration within the project to ensure correct navigation to the blog entry detail and edit pages.
+
+3- Validation and Saving Methods in the Blog Model:
+Reviewed and corrected validation and saving methods in the Blog model to ensure that changes made to blog entries are saved correctly in the database.
+
+4- Error Handling and Validation Messages:
+Improved error handling and validation messages in edit views and forms to provide clear feedback to the user in case of errors during blog entry editing and saving.
+
+Final Expected Outcome: 
+The changes made enable users with appropriate permissions to effectively edit blog entries, ensuring that modifications are saved correctly and reflected accurately in the user interface and database.

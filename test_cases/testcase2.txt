@@ -1,0 +1,19 @@
+Test Case 2: Searching Blog Entries by Title
+
+Objective: 
+Verify that the system can search and display blog entries that match a specific title.
+
+Steps:
+
+1. Log in as a registered user.
+
+2. Navigate to the blog search page.
+
+3. Enter a valid title of an existing blog entry.
+
+4. Execute the search.
+
+5. Verify that only blog entries containing the specified title are displayed.
+
+Expected Outcome: 
+Blog entries matching the search title are correctly displayed in the search results.

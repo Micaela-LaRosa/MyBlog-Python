@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block changingContent %}
+<h1>Log Out </h1>
+<p>Thank you for visiting this page, come back soon!</p>
+<form action="{% url 'Home' %}" method="POST">{% csrf_token %}
+    {{myForm.as_p}}
+    <button type="submit">Return Home</button>
+</form> 
+{% endblock changingContent %}

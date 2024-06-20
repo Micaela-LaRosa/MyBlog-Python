@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block changingContent %} 
+<h1>List of Blogs</h1>
+
+{% if user.is_staff %}
+    <button><a href="{% url 'NewPage' %}"> New Blog Page </a></button>
+{% endif %}
+<br>
+{% for blog in blogs %}
+    <br>
+    <li>Title: {{blog.title}} - Author: {{blog.author}}
+        <p>
+            <div><a href="{% url 'DetailBlog' blog.pk %}">Read moore</a></div>
+            {% if user.is_staff %}
+                <div><a href="{% url 'EditBlog' blog.pk %}">Edit</a></div>
+                <div><a href="{% url 'DeleteBlog' blog.pk %}">Delete</a></div>
+            {% endif %}
+        </p>
+    </li>
+{% endfor %}
+{% endblock changingContent %}

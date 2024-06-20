@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block changingContent %}
+<h1>Blog detail </h1>
+<p>Title: <i>{{blog.title}}</i></p>
+<p>Subtitle: <i>{{blog.subtitle}}</i></p>
+<p>Body: <i>{{blog.body}}</i></p>
+<p>Author: <i>{{blog.author}}</i></p>
+<p>Date: <i>{{blog.date}}</i></p>
+<p>{% if blog.image %}
+    <p>Image: <img src="{{ blog.image.url }}" alt="{{ blog.title }}"/></p>
+{% endif %}</p>
+{% if user.is_staff %}
+    <a href="{% url 'EditBlog' blog.pk %}">Edit</a>
+    <a href="{% url 'DeleteBlog' blog.pk %}">Delete</a>
+{% endif %}
+<button>
+    <a href="{% url 'PagesList' %}">Return</a>
+</button>
+{% endblock changingContent %}

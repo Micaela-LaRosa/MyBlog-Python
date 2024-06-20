@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block changingContent %}
+    {% if user.is_staff %}
+        <h1>Delete Blog </h1>
+        <form action="{% url 'DeleteBlog' blogs.id %}" method="POST">{% csrf_token %}
+            Are you sure you want to delete the Blog {{blogs.title}} written by {{blogs.author}}?
+            <button type="submit">Confirm</button>
+            <button><a href="{% url 'PagesList' %}"> Cancelar</button>
+        </form>
+    {% else %}
+        <p>You do not have permission to delete this blog.</p>
+    {% endif %}    
+{% endblock changingContent %}

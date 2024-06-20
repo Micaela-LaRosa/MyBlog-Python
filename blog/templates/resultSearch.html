@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block changingContent %}
+<p>Blog search: {{title}}</p>
+{% if blogs %}
+ 
+<ul>
+{% for blog in blogs %}
+    <li> Title: {{blog.title}} - Subtitule: {{blog.subtitle}} is charge </li>
+{% endfor %}
+</ul>
+{% else %}
+    <p>No blogs found.</p>
+{% endif %}
+<button>
+    <a href="{% url 'Home' %}">Home page</a>
+</button>
+{% endblock changingContent %}
